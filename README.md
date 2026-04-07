@@ -1,4 +1,5 @@
 # EvoXAI
+<<<<<<< HEAD
 **Autonomous Multi-Language Trading Strategy Developer**
 
 EvoXAI is a complete, production-ready, self-improving trading platform that generates, tests, evolves, and explains trading strategies across multiple styles and programming languages. It combines evolutionary algorithms, reinforcement learning, explainable AI, and causal inference into a single autonomous system.
@@ -175,3 +176,6 @@ cd services/go && go test ./...
 
 ---
 *EvoXAI — Build. Evolve. Explain. Profit.*
+=======
+EvoXAI: Autonomous, self-improving trading system using evolutionary AI &amp; XAI. Generates/evolves 6 strategy styles, explains every trade decision, adapts to market regimes without human intervention.
+>>>>>>> 81e8801fa87d4c8e0a002fc899ddb24274d63f4b
