@@ -1,0 +1,71 @@
+# ── Core Scientific Stack ──────────────────────────────────────────────────────
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+jupyter
+
+# ── Machine Learning & Deep Learning ──────────────────────────────────────────
+torch
+torchvision
+torchaudio
+scikit-learn
+xgboost
+lightgbm
+joblib
+
+# ── Backtesting & Data ────────────────────────────────────────────────────────
+vectorbt
+yfinance
+python-binance
+sqlalchemy
+psycopg2-binary
+alembic
+
+# ── Distributed Computing ─────────────────────────────────────────────────────
+ray[default]
+dask
+distributed
+
+# ── Vector DB & Embeddings ────────────────────────────────────────────────────
+chromadb
+sentence-transformers
+pypdf2
+openai
+requests
+
+# ── API & Streaming ───────────────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+websockets
+grpcio
+grpcio-tools
+protobuf
+
+# ── Online Learning & Drift Detection ────────────────────────────────────────
+hmmlearn
+river
+shap
+lime
+dowhy
+causal-learn
+networkx
+
+# ── Paper Trading ─────────────────────────────────────────────────────────────
+alpaca-trade-api
+
+# ── Dashboard ────────────────────────────────────────────────────────────────
+streamlit
+plotly
+altair
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+loguru
+tqdm
+pyyaml
+python-dotenv
+redis
+pydantic
+httpx
+aiohttp

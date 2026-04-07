@@ -1,0 +1,44 @@
+# ── Minimal core to run orchestrator + dashboard + tests ──────────────────────
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+
+# ── Market Data ───────────────────────────────────────────────────────────────
+yfinance
+requests
+
+# ── ML (lightweight) ──────────────────────────────────────────────────────────
+scikit-learn
+xgboost
+lightgbm
+joblib
+hmmlearn
+
+# ── Backtesting data layer ─────────────────────────────────────────────────────
+sqlalchemy
+psycopg2-binary
+
+# ── API & Streaming ───────────────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+websockets
+httpx
+aiohttp
+pydantic
+
+# ── Dashboard ─────────────────────────────────────────────────────────────────
+streamlit
+plotly
+altair
+
+# ── Explainability (lightweight shap only) ───────────────────────────────────
+shap
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+loguru
+tqdm
+pyyaml
+python-dotenv
+redis

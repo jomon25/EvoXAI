@@ -1,0 +1,56 @@
+version: '3.8'
+services:
+  postgres:
+    image: timescale/timescaledb:latest-pg14
+    environment:
+      POSTGRES_USER: evoxai
+      POSTGRES_PASSWORD: evoxai123
+      POSTGRES_DB: evoxai_db
+    ports: ['5432:5432']
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U evoxai']
+      interval: 10s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports: ['6379:6379']
+    command: redis-server --appendonly yes
+
+  chromadb:
+    image: chromadb/chroma:latest
+    ports: ['8001:8000']
+    volumes: [chroma_data:/chroma/chroma]
+    environment: [IS_PERSISTENT=TRUE]
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports: ['5672:5672', '15672:15672']
+    environment:
+      RABBITMQ_DEFAULT_USER: evoxai
+      RABBITMQ_DEFAULT_PASS: evoxai123
+
+  cpp-execution:
+    build: ./services/cpp
+    depends_on: [redis]
+    deploy: {replicas: 2}
+
+  go-matching:
+    build: ./services/go
+    ports: ['50052:50052']
+    depends_on: [redis]
+
+  rust-market:
+    build: ./services/rust
+    ports: ['50053:50053']
+    depends_on: [redis]
+
+  java-portfolio:
+    build: ./services/java
+    ports: ['8080:8080']
+    depends_on: [postgres]
+
+volumes:
+  postgres_data:
+  chroma_data:
